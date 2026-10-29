@@ -1,0 +1,12 @@
+import mongoose from 'mongoose';
+const userSchema = new mongoose.Schema({name:{type:String,required:true},email:{type:String,required:true,unique:true,lowercase:true},password:{type:String,required:true,select:false},role:{type:String,enum:['hr','manager','employee'],default:'employee'},department:{type:String,default:'General'},jobTitle:{type:String,default:'Team Member'}},{timestamps:true});
+const leaveSchema = new mongoose.Schema({employee:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true},type:{type:String,default:'Annual'},startDate:{type:Date,required:true},endDate:{type:Date,required:true},reason:{type:String,required:true},status:{type:String,enum:['Pending','Approved','Rejected'],default:'Pending'},reviewedBy:{type:mongoose.Schema.Types.ObjectId,ref:'User'}},{timestamps:true});
+const attendanceSchema = new mongoose.Schema({employee:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true},date:{type:String,required:true},checkIn:{type:Date,default:Date.now},status:{type:String,default:'Present'}},{timestamps:true});
+attendanceSchema.index({employee:1,date:1},{unique:true});
+const announcementSchema = new mongoose.Schema({title:{type:String,required:true},message:{type:String,required:true},author:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true}},{timestamps:true});
+const trainingSchema = new mongoose.Schema({title:{type:String,required:true},description:String,date:{type:Date,required:true},createdBy:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true}},{timestamps:true});
+export const User=mongoose.model('User',userSchema);
+export const Leave=mongoose.model('Leave',leaveSchema);
+export const Attendance=mongoose.model('Attendance',attendanceSchema);
+export const Announcement=mongoose.model('Announcement',announcementSchema);
+export const Training=mongoose.model('Training',trainingSchema);

@@ -1,0 +1,17 @@
+# StaffSync Documentation Index
+
+- [Task 1 — Technical Architecture](01-technical-architecture.md)
+- [Task 2 — ER Diagram](02-er-diagram.md)
+- [Task 3 — Features](03-features.md)
+- [Task 4 — Roles and Responsibilities](04-roles-and-responsibilities.md)
+- [Task 5 — User Flow](05-user-flow.md)
+- [Task 6 — MVC Pattern](06-mvc-pattern.md)
+- [Tasks 7–9 — Folder and Setup](07-project-folder-and-setup.md)
+- [Task 10 — Backend Structure](08-backend-structure.md)
+- [Task 11 — Backend Development](09-backend-development.md)
+- [Task 12 — MongoDB Configuration](10-mongodb-configuration.md)
+- [Task 13 — Database Connection](11-database-connection.md)
+- [Task 14 — Schema and Models](12-schema-and-models.md)
+- [Task 15 — Frontend Structure](13-frontend-structure.md)
+- [Task 16 — Frontend Development](14-frontend-development.md)
+- [Task 17 — Project Execution](15-project-execution.md)
