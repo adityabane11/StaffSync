@@ -83,3 +83,8 @@ The `screenshots/` folder includes a capture checklist, not fabricated applicati
 - Replace the demo JWT secret and demo passwords before any public deployment.
 - Use HTTPS, input validation, appropriate authorization checks, and production database access rules before production use.
 - This is an educational project, not a certified HR/payroll product.
+## Demo Video
+
+Watch the StaffSync project demonstration:
+
+[▶ Watch StaffSync Demo Video](https://drive.google.com/file/d/1d-QyJk4szDYrB20PGeCgUpi-_Kv_gVZ9/view?usp=drive_link)
